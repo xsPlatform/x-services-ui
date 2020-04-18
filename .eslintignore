@@ -1,0 +1,5 @@
+webpack.config.js
+storybook
+*.test.jsx
+*.test.js
+*.stories.jsx

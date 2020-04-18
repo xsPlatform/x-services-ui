@@ -1,0 +1,1 @@
+export { addressDataSchema } from './addressDataSchema';
