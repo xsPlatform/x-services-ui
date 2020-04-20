@@ -11,3 +11,4 @@ export { Strong } from './Strong';
 export { NormalInput } from './NormalInput';
 export { Span } from './Span';
 export { CircleButton } from './CircleButton';
+export { IconButton } from './IconButton';

@@ -19,12 +19,14 @@ export { Spinner } from './components/atoms/Spinner';
 export { Snackbar } from './components/atoms/Snackbar';
 export { Strong } from './components/atoms/Strong';
 export { Span } from './components/atoms/Span';
+export { IconButton } from './components/atoms/IconButton';
 
 // Components Molecules
 export { Search } from './components/molecules/Search';
 export { default as TextField } from './components/molecules/TextField';
 export { ErrorMessageBox } from './components/molecules/ErrorMessageBox';
 export { Dialog } from './components/molecules/Dialog';
+export { MenuMobile } from './components/molecules/MenuMobile';
 
 // Components Organisms
 

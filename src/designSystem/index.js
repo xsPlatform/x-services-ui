@@ -166,13 +166,6 @@ const designTokens = {
     xlg: '0.625rem',
   },
 
-  breakpoints: {
-    sm: '359px',
-    s: '767px',
-    m: '768px',
-    l: '1280px',
-  },
-
   typography: {
     size: {
       h1: 96,
@@ -238,13 +231,20 @@ const designTokens = {
     8: 24,
     9: 27,
   },
+
+  breakpoints: {
+    sm: '359px',
+    s: '768px',
+    m: '1280px',
+    l: '1920px',
+  },
 };
 
 designTokens.device = {
   sm: `(max-width: ${designTokens.breakpoints.sm})`,
-  s: `(max-width: ${designTokens.breakpoints.s})`,
+  s: `(min-width: ${designTokens.breakpoints.s})`,
   m: `(min-width: ${designTokens.breakpoints.m})`,
   l: `(min-width: ${designTokens.breakpoints.l})`,
 };
 
-export default new DesignSystem(designTokens, { fontSizeUnit: 'rem' });
+export default new DesignSystem(designTokens);
