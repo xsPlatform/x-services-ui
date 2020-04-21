@@ -19,3 +19,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - s: '768px',
     - m: '1280px',
     - l: '1920px',
+
+## [0.0.2] - 2020-04-21
+### Added
+  - Export `Materia-UI` components:
+    - Button.
+    - Grid.
+    - Link.
+    - Paper.
+    - TextField.
+  - Add new Component MenuMobile
+  - Add new helpers functions:
+     - colors
+     - exeptions
+     - theme
+     - validations
+       - cpf
+       - email
+
+### Changed
+  - `Snackbar` animation.
