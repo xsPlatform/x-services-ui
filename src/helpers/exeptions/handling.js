@@ -8,8 +8,8 @@ const status400Message = (errorMessage) => {
 };
 
 const status401Message = (errorMessage) => {
-  if (errorMessage.includes('Invalid credentials')) {
-    return 'Email ou Senha invalidos';
+  if (errorMessage.includes('Email ou senha incorretos')) {
+    return 'Email ou Senha incorretos';
   }
   return 'Erro ao realizar ação. Tente novamente mais tarde!';
 };
