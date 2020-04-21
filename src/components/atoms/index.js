@@ -12,3 +12,8 @@ export { NormalInput } from './NormalInput';
 export { Span } from './Span';
 export { CircleButton } from './CircleButton';
 export { IconButton } from './IconButton';
+export { ButtonMUI } from './ButtonMUI';
+export { LinkMUI } from './LinkMUI';
+export { GridMUI } from './GridMUI';
+export { TextFieldMUI } from './TextFieldMUI';
+export { PaperMUI } from './PaperMUI';

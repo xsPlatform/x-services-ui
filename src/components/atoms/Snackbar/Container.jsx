@@ -19,6 +19,10 @@ export const Container = styled.div.attrs(({ show }) => ({
   width: ${pxToRem(320)};
   z-index: ${ds.z('xhigh')};
 
+  @media ${ds.get('device.s')} {
+    width: ${pxToRem(420)};
+  }
+
   @keyframes cssAnimation {
     0%,
     7.5% {
@@ -31,7 +35,7 @@ export const Container = styled.div.attrs(({ show }) => ({
     }
 
     100% {
-      bottom: ${pxToRem(-70)};
+      bottom: ${pxToRem(-300)};
     }
   }
 
@@ -47,12 +51,12 @@ export const Container = styled.div.attrs(({ show }) => ({
 
     @keyframes snackbar-show {
       0% {
-        bottom: ${pxToRem(-70)};
+        bottom: ${pxToRem(-300)};
       }
 
       90%,
       95% {
-        bottom: ${pxToRem(15)};
+        bottom: ${pxToRem(5)};
       }
 
       92.5%,

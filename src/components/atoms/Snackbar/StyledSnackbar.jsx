@@ -20,7 +20,7 @@ export const StyledSnackbar = styled.div.attrs({
 })`
   background-color: ${(props) => renderBackGrounColor(props.type)};
   border-radius: ${pxToRem(4)};
-  bottom: ${pxToRem(-70)};
+  bottom: ${pxToRem(-90)};
   box-shadow: ${ds.get('shadow.snackbar')};
   color: ${ds.color('white')};
   display: flex;

@@ -31,7 +31,7 @@ export const SnackbarCheckbox = styled.input.attrs({
     }
 
     100% {
-      bottom: ${pxToRem(-70)};
+      bottom: ${pxToRem(-300)};
     }
   }
 `;

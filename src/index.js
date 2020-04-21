@@ -21,6 +21,9 @@ export { Strong } from './components/atoms/Strong';
 export { Span } from './components/atoms/Span';
 export { IconButton } from './components/atoms/IconButton';
 
+// Material UI
+export { TextFieldMUI, GridMUI, LinkMUI, ButtonMUI, PaperMUI } from './components/atoms';
+
 // Components Molecules
 export { Search } from './components/molecules/Search';
 export { default as TextField } from './components/molecules/TextField';
@@ -59,8 +62,19 @@ export { default as pxToRem } from './helpers/scales/converter';
 
 // Helpers Validations
 
+export { validCpf, isEmail } from './helpers/validations';
+
 // Helpers Schemas
 export { addressDataSchema } from './helpers/schemas';
 
 // Helpers Mask
 export { maskCEP } from './helpers/mask';
+
+// Helpers Colors
+export { getColor } from './helpers/colors';
+
+// Theme
+export { MuiThemeProvider, theme } from './helpers/theme';
+
+// Exeptions
+export { handleException } from './helpers/exeptions';

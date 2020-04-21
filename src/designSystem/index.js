@@ -52,7 +52,7 @@ const designTokens = {
   colors: {
     colorPalette: {
       bright: {
-        base: '#f2f2f2',
+        base: '#F5F5F5',
         100: '#e9e9e9',
         200: '#d8d8d8',
         300: '#f0f2f5',
@@ -91,8 +91,9 @@ const designTokens = {
       },
 
       green: {
-        light: '#3cb5b1',
-        approved: '#8cce7d',
+        light: '#BEDFE2',
+        base: '#00909B',
+        dark: '#05555B',
       },
     },
 

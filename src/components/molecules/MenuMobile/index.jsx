@@ -8,6 +8,7 @@ import ExitToApp from '@material-ui/icons/ExitToApp';
 import MenuIcon from '@material-ui/icons/Menu';
 import Help from '@material-ui/icons/Help';
 import GroupIcon from '@material-ui/icons/Group';
+import VerifiedUser from '@material-ui/icons/VerifiedUser';
 
 export const MenuMobile = ({ onClickIcon }) => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -45,7 +46,7 @@ export const MenuMobile = ({ onClickIcon }) => {
         </IconButton>
         <p>Trabalhe no app</p>
       </MenuItem>
-      <MenuItem onClick={() => onClickIcon('/login')}>
+      <MenuItem onClick={() => onClickIcon('/signin')}>
         <IconButton color="inherit">
           <ExitToApp />
         </IconButton>
@@ -56,6 +57,12 @@ export const MenuMobile = ({ onClickIcon }) => {
           <Help />
         </IconButton>
         <p>Ajuda</p>
+      </MenuItem>
+      <MenuItem onClick={() => onClickIcon('/privacy-statement')}>
+        <IconButton color="inherit">
+          <VerifiedUser />
+        </IconButton>
+        <p>Política de privacidade</p>
       </MenuItem>
     </Menu>
   );
