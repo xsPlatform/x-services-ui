@@ -6,3 +6,5 @@ export { MenuMobile } from './MenuMobile';
 export { PageHeaderTool } from './PageHeaderTool';
 export { PasswordFieldMUI } from './PasswordFieldMUI';
 export { CardMUI } from './CardMUI';
+export { CardHelpMUI } from './CardHelpMUI';
+export { SearchFieldMUI } from './SearchFieldMUI';

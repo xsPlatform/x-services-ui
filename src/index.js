@@ -37,7 +37,13 @@ export { default as TextField } from './components/molecules/TextField';
 export { ErrorMessageBox } from './components/molecules/ErrorMessageBox';
 export { Dialog } from './components/molecules/Dialog';
 export { MenuMobile } from './components/molecules/MenuMobile';
-export { PageHeaderTool, PasswordFieldMUI, CardMUI } from './components/molecules';
+export {
+  PageHeaderTool,
+  PasswordFieldMUI,
+  CardMUI,
+  CardHelpMUI,
+  SearchFieldMUI,
+} from './components/molecules';
 
 // Components Organisms
 
