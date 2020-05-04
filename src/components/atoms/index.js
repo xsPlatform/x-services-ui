@@ -17,3 +17,4 @@ export { LinkMUI } from './LinkMUI';
 export { GridMUI } from './GridMUI';
 export { TextFieldMUI } from './TextFieldMUI';
 export { PaperMUI } from './PaperMUI';
+export { MenuItemMUI } from './MenuItemMUI';

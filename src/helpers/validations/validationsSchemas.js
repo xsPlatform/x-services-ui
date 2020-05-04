@@ -17,6 +17,11 @@ export default {
   Required() {
     return Yup.string().required('Campo obrigatório!');
   },
+  Email() {
+    return Yup.string()
+      .required('Campo obrigatório!')
+      .email('Email inválido!');
+  },
   AddressNumber() {
     return Yup.string().test('validAddressNumber', 'Campo obrigatório!', (value) => {
       if (checked || value) {
@@ -24,6 +29,14 @@ export default {
       }
       return false;
     });
+  },
+  PasswordClient() {
+    return Yup.string()
+      .required('Campo obrigatório!')
+      .matches(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,16}$/,
+        'Senha fraca, verificar Regras para senha',
+      );
   },
   CheckNoNumber() {
     return Yup.string().test('checkNoNumber', (value) => {

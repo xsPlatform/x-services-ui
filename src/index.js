@@ -22,7 +22,14 @@ export { Span } from './components/atoms/Span';
 export { IconButton } from './components/atoms/IconButton';
 
 // Material UI
-export { TextFieldMUI, GridMUI, LinkMUI, ButtonMUI, PaperMUI } from './components/atoms';
+export {
+  TextFieldMUI,
+  GridMUI,
+  LinkMUI,
+  ButtonMUI,
+  PaperMUI,
+  MenuItemMUI,
+} from './components/atoms';
 
 // Components Molecules
 export { Search } from './components/molecules/Search';
@@ -30,7 +37,7 @@ export { default as TextField } from './components/molecules/TextField';
 export { ErrorMessageBox } from './components/molecules/ErrorMessageBox';
 export { Dialog } from './components/molecules/Dialog';
 export { MenuMobile } from './components/molecules/MenuMobile';
-export { PageHeaderTool } from './components/molecules';
+export { PageHeaderTool, PasswordFieldMUI, CardMUI } from './components/molecules';
 
 // Components Organisms
 
@@ -66,7 +73,7 @@ export { default as pxToRem } from './helpers/scales/converter';
 export { validCpf, isEmail } from './helpers/validations';
 
 // Helpers Schemas
-export { addressDataSchema } from './helpers/schemas';
+export { addressDataSchema, signupDataSchema } from './helpers/schemas';
 
 // Helpers Mask
 export { maskCEP } from './helpers/mask';
