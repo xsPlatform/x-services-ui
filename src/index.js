@@ -79,7 +79,7 @@ export { default as pxToRem } from './helpers/scales/converter';
 export { validCpf, isEmail } from './helpers/validations';
 
 // Helpers Schemas
-export { addressDataSchema, signupDataSchema } from './helpers/schemas';
+export { addressDataSchema, signupDataSchema, resetPasswordDataSchema } from './helpers/schemas';
 
 // Helpers Mask
 export { maskCEP } from './helpers/mask';

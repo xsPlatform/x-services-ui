@@ -14,12 +14,21 @@ const status401Message = (errorMessage) => {
   return 'Erro ao realizar ação. Tente novamente mais tarde!';
 };
 
+const status404Message = (errorMessage) => {
+  if (errorMessage.includes('Usuário não encontrado')) {
+    return 'Usuário não encontrado';
+  }
+  return 'Erro ao realizar ação. Tente novamente mais tarde!';
+};
+
 export const handleException = (status, errorMessage) => {
   switch (status) {
     case 400:
       return status400Message(errorMessage);
     case 401:
       return status401Message(errorMessage);
+    case 404:
+      return status404Message(errorMessage);
     default:
       return status400Message(errorMessage);
   }
