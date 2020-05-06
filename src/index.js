@@ -50,6 +50,7 @@ export {
 // Components Templates
 
 export { default as Main } from './components/templates/Main';
+export { default as MaterialMain } from './components/templates/MaterialMain';
 // Components Pages
 
 /*
