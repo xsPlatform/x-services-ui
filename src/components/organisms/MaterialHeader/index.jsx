@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { func } from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Typography, MenuItem, Menu } from '@material-ui/core';
-import {
-  Menu as MenuIcon,
-  AccountCircle,
-  MoreVert as MoreIcon,
-  ExitToAppOutlined,
-  VpnKey,
-} from '@material-ui/icons';
+import { IconButton, Typography, MenuItem, Menu } from '@material-ui/core';
+import { AccountCircle, ExitToAppOutlined, VpnKey } from '@material-ui/icons';
 import Drawer from '../../molecules/MaterialDrawer';
 import { ToolbarMUI } from './ToolbarMUI';
+import { AppBarMUI } from './AppBarMUI';
 import { ImageBox } from './ImageBox';
+import { MoreIcon, MenuIcon } from './Icons';
 
 const useStyles = makeStyles((theme) => ({
   popover: {
@@ -109,7 +105,7 @@ const Main = ({ redirect, onExit }) => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" style={{ boxShadow: 'none', backgroundColor: '#ffffff' }}>
+      <AppBarMUI position="static" style={{ boxShadow: 'none' }}>
         <ToolbarMUI style={{ justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <IconButton
@@ -145,7 +141,7 @@ const Main = ({ redirect, onExit }) => {
             </IconButton>
           </div>
         </ToolbarMUI>
-      </AppBar>
+      </AppBarMUI>
       {renderMobileMenu}
       <Drawer
         open={openMenu}

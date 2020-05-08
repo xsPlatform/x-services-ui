@@ -1,4 +1,6 @@
 import * as Yup from 'yup';
+import { validCpf } from './cpf';
+import { validCNPJ } from './cnpj';
 
 let checked = false;
 
@@ -22,6 +24,22 @@ export default {
       .required('Campo obrigatório!')
       .email('Email inválido!');
   },
+  CpfCnpj() {
+    return Yup.string()
+      .required('Campo obrigatório!')
+      .test('cpf', 'Cpf inválido!', (value) => {
+        if (value && value.length <= 14) {
+          return validCpf(value);
+        }
+        return true;
+      })
+      .test('CpfCnpj', 'Cnpj inválido!', (value) => {
+        if (value && value.length > 14) {
+          return validCNPJ(value);
+        }
+        return true;
+      });
+  },
   AddressNumber() {
     return Yup.string().test('validAddressNumber', 'Campo obrigatório!', (value) => {
       if (checked || value) {
@@ -43,5 +61,19 @@ export default {
       checked = value === 'true';
       return true;
     });
+  },
+  CompanyResponsibleName() {
+    return Yup.string().when('personType', {
+      is: (personType) => personType === 2,
+      then: Yup.string().required('Campo obrigatório'),
+    });
+  },
+  CompanyResponsibleEmail() {
+    return Yup.string()
+      .when('personType', {
+        is: (personType) => personType === '2',
+        then: Yup.string().required('Campo obrigatório'),
+      })
+      .email('Email inválido!');
   },
 };

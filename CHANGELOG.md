@@ -4,9 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0] - 2020-05-07
+### Added
+   - added new `yup` schema personalDataSchema.
+    - Export `Materia-UI` components:
+      - AppBar.
+      - Toolbar.
+      - Icons.
+   - added new string formater `formatCpfCnpj`.
+   - new `yup` validations:
+     - CpfCnpj.
+     - CompanyResponsibleName.
+     - CompanyResponsibleEmail.
+
 ## [0.0.9] - 2020-05-06
 ### Added
-  - new template MaterialMain with components:
+  - new template `MaterialMain` with components:
     - MaterialDrower.
     - Footer.
     - MaterialHeader.

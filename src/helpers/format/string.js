@@ -38,4 +38,20 @@ export const zeroPad = (str, max) => Array(max - Math.floor(Math.log10(str))).jo
 
 export const formatDouble = (double) => numberToReal(double);
 
+const cpfMask = (value) => value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4');
+
+const cnpjMask = (value) => value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, '$1.$2.$3/$4-$5');
+
+export const formatCpfCnpj = (cpfCnpj) => {
+  let value = cpfCnpj;
+  if (value) {
+    if (value.length <= 11) {
+      value = cpfMask(value);
+    } else {
+      value = cnpjMask(value);
+    }
+  }
+  return value;
+};
+
 export default (params) => params;

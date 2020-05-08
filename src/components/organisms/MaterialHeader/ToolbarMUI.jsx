@@ -9,7 +9,7 @@ export const ToolbarMUI = styled(Toolbar)`
   }
   @media ${ds.get('device.s')} {
     & {
-      height: ${pxToRem(200)};
+      height: ${pxToRem(250)};
     }
   }
 `;
