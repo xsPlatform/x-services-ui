@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
-import { func } from 'prop-types';
+import { func, arrayOf, shape } from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { IconButton, Typography, MenuItem, Menu } from '@material-ui/core';
+import styled from 'styled-components';
+
+import { IconButton, Typography, MenuItem, Menu, AppBar } from '@material-ui/core';
 import { AccountCircle, ExitToAppOutlined, VpnKey } from '@material-ui/icons';
 import Drawer from '../../molecules/MaterialDrawer';
 import { ToolbarMUI } from './ToolbarMUI';
-import { AppBarMUI } from './AppBarMUI';
 import { ImageBox } from './ImageBox';
 import { MoreIcon, MenuIcon } from './Icons';
+import ds from '../../../designSystem';
+
+const AppBarMUI = styled(AppBar)`
+  @media ${ds.get('device.s')} {
+    & {
+      background-color: #fff !important;
+    }
+  }
+`;
 
 const useStyles = makeStyles((theme) => ({
   popover: {
@@ -33,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Main = ({ redirect, onExit }) => {
+const Main = ({ redirect, onExit, sideMenuItens }) => {
   const classes = useStyles();
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
@@ -144,6 +154,7 @@ const Main = ({ redirect, onExit }) => {
       </AppBarMUI>
       {renderMobileMenu}
       <Drawer
+        sideMenuItens={sideMenuItens}
         open={openMenu}
         closeMenu={() => setOpenMenu(false)}
         clickItemMenu={handleChangeMenu}
@@ -153,6 +164,7 @@ const Main = ({ redirect, onExit }) => {
 };
 
 Main.propTypes = {
+  sideMenuItens: arrayOf(shape({})).isRequired,
   redirect: func.isRequired,
   onExit: func.isRequired,
 };
