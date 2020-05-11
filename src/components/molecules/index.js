@@ -8,3 +8,4 @@ export { PasswordFieldMUI } from './PasswordFieldMUI';
 export { CardMUI } from './CardMUI';
 export { CardHelpMUI } from './CardHelpMUI';
 export { SearchFieldMUI } from './SearchFieldMUI';
+export { ItemCardTable } from './ItemCardTable';

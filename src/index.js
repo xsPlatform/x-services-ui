@@ -43,6 +43,7 @@ export {
   CardMUI,
   CardHelpMUI,
   SearchFieldMUI,
+  ItemCardTable,
 } from './components/molecules';
 
 // Components Organisms

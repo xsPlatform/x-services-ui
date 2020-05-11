@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.10] - 2020-05-10
+ItemCardTable
+## [0.0.13] - 2020-05-10
+### Added
+   - added prop `itemCardTable`.
+
+## [0.0.12] - 2020-05-10
 ### Added
    - added prop `sideMenuItens` to MateralDrawer, this property will receive items from the side menu.
 

@@ -25,11 +25,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SearchFieldMUI = ({ placeholder, onChange, value }) => {
+const SearchFieldMUI = ({ placeholder, onChange, value, ...props }) => {
   const classes = useStyles();
 
   return (
-    <Paper component="form" className={classes.root}>
+    <Paper component="form" className={classes.root} {...props}>
       <SearchIcon style={{ width: 26, heigth: 26, color: '#00909B', marginLeft: 7 }} />
       <InputBase
         className={classes.input}
