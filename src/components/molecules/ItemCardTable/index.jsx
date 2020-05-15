@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { func, string } from 'prop-types';
 import { IconButton, MenuItem, Menu } from '@material-ui/core';
 import { MoreVert, Edit, Delete } from '@material-ui/icons';
 import { Container } from './Container';
 
-// eslint-disable-next-line react/prop-types
-const ItemCardTable = ({ onClickItem }) => {
+const ItemCardTable = ({ onClickItem, title, id }) => {
   const [moreAnchorEl, setMoreAnchorEl] = useState(null);
 
   const isMenuOpen = Boolean(moreAnchorEl);
@@ -20,7 +20,7 @@ const ItemCardTable = ({ onClickItem }) => {
   };
 
   const redirectAndCloseMobile = (menuItemName) => {
-    onClickItem(menuItemName);
+    onClickItem(menuItemName, id);
     handleMenuClose();
   };
 
@@ -51,7 +51,7 @@ const ItemCardTable = ({ onClickItem }) => {
 
   return (
     <Container>
-      <span>Serviços domésticos</span>
+      <span>{title}</span>
       <IconButton
         aria-label="show more"
         aria-controls={mobileMenuId}
@@ -65,4 +65,11 @@ const ItemCardTable = ({ onClickItem }) => {
     </Container>
   );
 };
+
+ItemCardTable.propTypes = {
+  onClickItem: func.isRequired,
+  title: string.isRequired,
+  id: string.isRequired,
+};
+
 export { ItemCardTable };
