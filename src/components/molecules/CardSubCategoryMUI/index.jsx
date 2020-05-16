@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, bool, func } from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import {
@@ -74,5 +74,9 @@ const CardSubCategoryMUI = ({ children, title, handleChangeCheckBox, id, checked
 CardSubCategoryMUI.propTypes = {
   children: node.isRequired,
   title: string.isRequired,
+  handleChangeCheckBox: func.isRequired,
+  checked: bool.isRequired,
+  id: string.isRequired,
 };
+
 export { CardSubCategoryMUI };
