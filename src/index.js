@@ -44,6 +44,9 @@ export {
   CardHelpMUI,
   SearchFieldMUI,
   ItemCardTable,
+  AvatarUploadMUI,
+  CardSubCategoryMUI,
+  CheckBoxMUI,
 } from './components/molecules';
 
 // Components Organisms

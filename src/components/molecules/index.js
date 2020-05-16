@@ -9,3 +9,6 @@ export { CardMUI } from './CardMUI';
 export { CardHelpMUI } from './CardHelpMUI';
 export { SearchFieldMUI } from './SearchFieldMUI';
 export { ItemCardTable } from './ItemCardTable';
+export { AvatarUploadMUI } from './AvatarUploadMUI';
+export { CardSubCategoryMUI } from './CardSubCategoryMUI';
+export { CheckBoxMUI } from './CheckBoxMUI';

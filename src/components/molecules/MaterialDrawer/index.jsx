@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { bool, func, arrayOf, shape } from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Drawer, List, ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
-import { Assignment, Dashboard } from '@material-ui/icons';
+import { Assignment, Dashboard, Work } from '@material-ui/icons';
 import { ImageBox } from './ImageBox';
 
 const useStyles = makeStyles({
@@ -36,6 +36,8 @@ const DrawerMenu = ({ open, closeMenu, clickItemMenu, sideMenuItens }) => {
         return <Dashboard />;
       case 'category':
         return <Assignment />;
+      case 'work':
+        return <Work />;
       default:
         return null;
     }
